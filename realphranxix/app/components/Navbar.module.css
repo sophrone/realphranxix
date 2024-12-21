@@ -35,24 +35,77 @@
   text-decoration: none;
 }
 
+/* Toggle button styles */
+.toggleButton {
+  display: none; /* Hidden by default */
+  background-color: transparent; /* Make background transparent */
+  border: none; /* Remove border */
+  color: #fff; /* White color */
+  font-size: 28px; /* Increase font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: transform 0.3s, background-color 0.3s; /* Animation for scaling and background color */
+}
+
+/* Rotate animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Focus animation for toggle button */
+.toggleButton:focus {
+  outline: none; /* Remove outline */
+  animation: rotate 0.5s forwards; /* Rotate when focused */
+}
+
+.toggleButton:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .nav {
-    display: none; /* Hide nav by default */
+    display: flex;
     flex-direction: column; /* Stack items vertically */
-  }
-
-  .nav.active {
-    display: flex; /* Show nav when active */
   }
 
   .navList {
+    display: none; /* Hide nav by default */
     flex-direction: column; /* Stack items vertically */
     width: 100%; /* Full width on mobile */
+  }
+
+  .navList.active {
+    display: flex; /* Show nav when active */
   }
 
   .navList li {
     margin-left: 0; /* Remove left margin */
     margin-bottom: 10px; /* Add space between items */
+  }
+
+  .toggleButton {
+    display: block; /* Show the toggle button on mobile */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Semi-transparent background */
+  }
+
+  .toggleButton:hover {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); /* Change background color on hover */
   }
 }

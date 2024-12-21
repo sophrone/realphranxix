@@ -1,8 +1,17 @@
+// /components/Navbar.tsx
+"use client"
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css'; 
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -17,7 +26,10 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <ul className={styles.navList}>
+        <button onClick={toggleNavbar} className={styles.toggleButton}>
+          ☰ {/* Hamburger icon */}
+        </button>
+        <ul className={`${styles.navList} ${isOpen ? styles.active : ''}`}>
           <li><Link href="/">Home</Link></li>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/music">Music</Link></li>

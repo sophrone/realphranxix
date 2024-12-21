@@ -1,14 +1,37 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif; /* Use Poppins for body text */
   background-color: #f4f4f4;
   color: #333;
   margin: 0;
   padding: 0;
 }
 
+h1 {
+  font-family: "Anton", sans-serif; /* Bold and eye-catching for main headings */
+  font-size: 3rem; /* Adjust size as needed */
+  color: #ff5722; /* Example color for a vibrant look */
+  margin: 0.5em 0;
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif; /* Great for subheadings */
+  font-size: 2.5rem;
+  color: #3f51b5; /* Another vibrant color */
+  margin: 0.5em 0;
+}
+
+h3 {
+  font-family: "Righteous", cursive; /* Unique flair for smaller headings */
+  font-size: 2rem;
+  color: #673ab7;
+  margin: 0.5em 0;
+}
+
 header {
   background: #333;
   color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 footer {
@@ -16,6 +39,10 @@ footer {
   padding: 10px 0;
   background: #333;
   color: #fff;
+}
+
+p {
+  line-height: 1.6; /* Improve readability */
 }
 
 /* Responsive styles */

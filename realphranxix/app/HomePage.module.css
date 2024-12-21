@@ -1,0 +1,215 @@
+/* homepage.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Anton", sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+.volumeSlider {
+  width: 100px; /* Adjust width as needed */
+  margin-left: 10px; /* Space between progress and volume slider */
+}
+
+.muteButton {
+  margin-left: 10px; /* Space between volume slider and mute button */
+  background: none; /* Remove default button styling */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+/* New Styles for Additional Sections */
+
+.musicSection,
+.eventsSection {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff; /* Card background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width for responsiveness */
+  max-width: 800px; /* Limit width for large screens */
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  color: #ff5722; /* Example color for subtitles */
+  margin-bottom: 10px;
+}
+
+.trackList,
+.eventList {
+  list-style-type: none;
+  padding: 0;
+  text-align: left; /* Align text to the left */
+  margin: 0;
+}
+
+.trackItem {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Space around each track */
+  border-bottom: 1px solid #ddd; /* Separator line */
+}
+
+.trackItem:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* Add some spacing */
+}
+
+.playButton {
+  background-color: transparent;
+  border: none;
+  color: #0070f3; /* Play button color */
+  font-size: 1.5rem; /* Size of play button */
+  cursor: pointer;
+  margin-right: 10px; /* Space between button and track name */
+  transition: color 0.3s;
+}
+
+.playButton:hover {
+  color: #005bb5; /* Change color on hover */
+}
+
+.pauseButton {
+  background-color: transparent;
+  border: none;
+  color: #ff5722; /* Pause button color */
+  font-size: 1.5rem; /* Size of pause button */
+  cursor: pointer;
+  margin-right: 10px; /* Space between button and track name */
+  transition: color 0.3s;
+}
+
+.pauseButton:hover {
+  color: #e64a19; /* Change color on hover */
+}
+
+.trackName {
+  font-size: 1.1rem; /* Font size for track names */
+}
+
+/* Progress Bar Styles */
+.progressBar {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 100%; /* Full width */
+  height: 5px; /* Height of the progress bar */
+  background: #ddd; /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove outline */
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 15px; /* Thumb width */
+  height: 15px; /* Thumb height */
+  background: #0070f3; /* Thumb color */
+  border-radius: 50%; /* Rounded thumb */
+}
+
+.progressBar::-moz-range-thumb {
+  width: 15px; /* Thumb width */
+  height: 15px; /* Thumb height */
+  background: #0070f3; /* Thumb color */
+  border-radius: 50%; /* Rounded thumb */
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px 0;
+  color: #666; /* Footer text color */
+}
+
+.socialLinks {
+  margin-top: 10px;
+}
+
+.socialLinks a {
+  margin: 0 10px;
+  color: #3f51b5; /* Example color for social links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.socialLinks a:hover {
+  color: #ff5722; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem; /* Smaller title on mobile */
+  }
+
+  .description {
+    font-size: 1rem; /* Smaller description text */
+  }
+
+  .button {
+    padding: 8px 16px; /* Adjust button size for mobile */
+    font-size: 0.9rem; /* Smaller button text */
+  }
+
+  .subTitle {
+    font-size: 1.3rem; /* Smaller subtitle on mobile */
+  }
+
+  .trackName {
+    font-size: 1rem; /* Smaller track name text */
+  }
+}
